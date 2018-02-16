@@ -1,0 +1,53 @@
+body {
+    background-color:#00193A;
+    color:#FFFFFF;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------- 
+   headers
+-----------------------------------------------------*/
+
+.header {
+    background-image: url('../Afbeeldingen/achtergrondheader.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#imgomgeving {
+    float: left;
+    padding: 0.5em;   
+}
+
+#imginfo {
+    float: left;
+    padding: 0.5em;   
+}
+
+#imgvoorraad {
+    float: left;
+    padding: 0.5em;   
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 1em;
+    margin-left: 1em;
+}
+
+/* -------------------------------------------------- 
+   Omgeving
+-----------------------------------------------------*/
+
+
+/* -------------------------------------------------- 
+   Voertuig Informatie
+-----------------------------------------------------*/
+
+/* -------------------------------------------------- 
+   Voorraad
+-----------------------------------------------------*/
+
