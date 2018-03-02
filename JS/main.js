@@ -27,22 +27,11 @@ var chart = new CanvasJS.Chart("radioactiviteit",{
             { x: 18.00, y: 0.9 },
             { x: 19.00, y: 0.4 }
         ]
-    }]
+    }] 
 });
     
-    document.getElementById('addDataPoint1').onclick = function () {
-		var length = chart.options.data[0].dataPoints.length;
-		chart.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
-		chart.render();
-	}
+chart.render();  
 
-	document.getElementById('updateDataPoint1').onclick = function () {
-		var length = chart.options.data[0].dataPoints.length;
-		chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
-		chart.render();
-	}
-    
-    chart.render();              
 
 // SUPPLY CHART
 
@@ -63,21 +52,10 @@ var chart = new CanvasJS.Chart("supply", {
 	}]
 });
 
-document.getElementById('removeFood').onclick = function () {
-		var length = chart.options.data[0].dataPoints.length;
-		chart.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
-		chart.render();
-	}
-
-	document.getElementById('removeWater').onclick = function () {
-		var length = chart.options.data[0].dataPoints.length;
-		chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
-		chart.render();
-	}
-
 chart.render();
+
+
         
-    
 // DRUK CHART
 
 
@@ -103,9 +81,7 @@ chart.render();
 		}
 	]
 	});
-	
-
-
+    chart.render();
 
 	document.getElementById('addDataPoint2').onclick = function () {
 		var length = chart.options.data[0].dataPoints.length;
@@ -119,6 +95,6 @@ chart.render();
 		chart.render();
 	}
 
-    chart.render();
+    
 
 
