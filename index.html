@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="Style/style.css">
         <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="JS/main.js"></script>
+        
         <title> ITSI </title>
     </head>
     <body>
@@ -15,13 +15,16 @@
                 
                 <section class="header">
                     <img src="Afbeeldingen/imgomgeving.svg" alt="icoon omgeving" id="imgomgeving">
-                    <h1> Radioactiviteit </h1>
+                    <h1> Gamma Radiation </h1>
                 </section>
                     
                 <section>
                     <div id="radioactiviteit">
                     </div>
-
+<!--
+                    <button id="addDataPoint1">Add Data</button>
+                    <button id="updateDataPoint1">Update Data </button>
+-->
                 </section>
             
             </section>
@@ -30,13 +33,13 @@
                 
                 <section class="header">
                     <img src="Afbeeldingen/imginfo.svg" alt="icoon info" id="imginfo">
-                    <h1> Druk in het voertuig </h1>
+                    <h1> Pressure in Cabin </h1>
                 </section>
                 
                 <section>
                     <div id="druk"></div>
-                    <button id="addDataPoint">Voeg Data Punt Toe</button>
-                    <button id="updateDataPoint">Update Data Punt</button>
+                    <button id="addDataPoint2">Add Data</button>
+                    <button id="updateDataPoint2">Update Data</button>
                 </section>
             
             </section>
@@ -45,19 +48,23 @@
                 
                 <section class="header">
                     <img src="Afbeeldingen/imgvoorraad.svg" alt="icoon voorraad" id="imgvoorraad">
-                    <h1> Voorraad </h1>
+                    <h1> Supply </h1>
                     
                 </section>
                 
                 <section>
                     <div id="supply"></div>
-                    
+<!--
+                    <button id="removeFood">Remove Food</button>
+                    <button id="removeWater">Remove Water</button>
+-->
                 </section>
            
             </section> 
             
         </main>
         
+        <script type="text/javascript" src="JS/main.js"></script>
         
    
     </body>

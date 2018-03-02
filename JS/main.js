@@ -1,43 +1,48 @@
 
 // RADIOACTIVITEIT CHART
 
-window.onload = function () {
+var chart = new CanvasJS.Chart("radioactiviteit",{
+        
+    backgroundColor: "#00193A",
+    axisX :{
+        labelFontColor: "#FFFFFF",
+    },
+    axisY :{
+        labelFontColor: "#FFFFFF"
+    },
+    data: [{
+        type: "line",
 
-    "use strict";
-    var chart = new CanvasJS.Chart("radioactiviteit", {
-        animationEnabled: true,
-        zoomEnabled: true,
-        backgroundColor: "#00193A",
-        axisX : {
-            includeZero: false,
-            labelFontColor: "#FFFFFF",
-        },
-        axisY : {
-            includeZero: false,
-            labelFontColor: "#FFFFFF"
-        },
-        data: data  // random generator below
-    });
+        dataPoints: [
+            { x: 8.00, y: 0.5 },
+            { x: 9.00, y: 3 },
+            { x: 10.00, y: 1 },
+            { x: 11.00, y: 4 },
+            { x: 12.00, y: 1.4 },
+            { x: 13.00, y: 6.5 },
+            { x: 14.00, y: 3.1 },
+            { x: 15.00, y: 8 },
+            { x: 16.00, y: 4.9 },
+            { x: 17.00, y: 6.7 },
+            { x: 18.00, y: 0.9 },
+            { x: 19.00, y: 0.4 }
+        ]
+    }]
+});
     
-    chart.render();
+    document.getElementById('addDataPoint1').onclick = function () {
+		var length = chart.options.data[0].dataPoints.length;
+		chart.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+		chart.render();
+	}
 
-    var limit = 1000;
-
-    var y = 0;
-    var data = [];
-    var dataSeries = { type: "line" };
-    var dataPoints = [];
-    for (var i = 0; i < limit; i += 1) {
-        y += (Math.random() * 10 - 5);
-        dataPoints.push({
-            x: i - limit / 2,
-            y: y                
-        });
-    }
+	document.getElementById('updateDataPoint1').onclick = function () {
+		var length = chart.options.data[0].dataPoints.length;
+		chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
+		chart.render();
+	}
     
-    dataSeries.dataPoints = dataPoints;
-    data.push(dataSeries);               
-
+    chart.render();              
 
 // SUPPLY CHART
 
@@ -57,6 +62,19 @@ var chart = new CanvasJS.Chart("supply", {
 		]
 	}]
 });
+
+document.getElementById('removeFood').onclick = function () {
+		var length = chart.options.data[0].dataPoints.length;
+		chart.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
+		chart.render();
+	}
+
+	document.getElementById('removeWater').onclick = function () {
+		var length = chart.options.data[0].dataPoints.length;
+		chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
+		chart.render();
+	}
+
 chart.render();
         
     
@@ -85,23 +103,22 @@ chart.render();
 		}
 	]
 	});
-	chart.render();
+	
 
 
 
-	document.getElementById('addDataPoint').onclick = function () {
+	document.getElementById('addDataPoint2').onclick = function () {
 		var length = chart.options.data[0].dataPoints.length;
 		chart.options.data[0].dataPoints.push({ y: 25 - Math.random() * 10});
 		chart.render();
 	}
 
-	document.getElementById('updateDataPoint').onclick = function () {
+	document.getElementById('updateDataPoint2').onclick = function () {
 		var length = chart.options.data[0].dataPoints.length;
 		chart.options.data[0].dataPoints[length-1].y = 15 - Math.random() * 10;
 		chart.render();
 	}
 
+    chart.render();
 
 
-
-}
